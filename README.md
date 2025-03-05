@@ -20,4 +20,4 @@ Please consider all three extra credits for grading!
 
 ## Notes
 
-My original repo that I used for this project is available [here](https://github.com/shl225/cs5356-hw4). Github Copilot and Tailwind CSS IntelliSense plugins on VSCode assisted with helping on parts of the code and formatting. Please see my code comments for details about my implementation.
+My original repo that I used for this project is available [here](https://github.com/shl225/cs5356-hw4). Github Copilot and Tailwind CSS IntelliSense plugins on VSCode assisted with helping on parts of the code and formatting. Please see my code comments for details about my implementation. Components that I made or the original default app had are in CamelCase, and components that are added via shadcn/ui are lowercase.
