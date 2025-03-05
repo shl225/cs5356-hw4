@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import TaskForm from './components/TaskForm';
-import TaskList from './components/TaskList';
-import TaskStats from './components/TaskStats';
+import TaskForm from './components/ui/TaskForm';
+import TaskList from './components/ui/TaskList';
+import TaskStats from './components/ui/TaskStats';
 
 const initialTasks = [
   { id: 1, text: 'Refill food bowl before yowling begins', completed: false },

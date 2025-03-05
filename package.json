@@ -12,10 +12,22 @@
   "author": "Ludwig Schubert",
   "license": "MIT",
   "dependencies": {
+    "@radix-ui/react-popover": "^1.1.6",
+    "@radix-ui/react-slot": "^1.1.2",
+    "@tailwindcss/vite": "^4.0.9",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.477.0",
     "react": "^18.3",
-    "react-dom": "^18.3"
+    "react-day-picker": "8.10.1",
+    "react-dom": "^18.3",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.0.9",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/node": "^22.13.9",
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.1.4"
   }
