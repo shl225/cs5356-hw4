@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 // creating a hook for persisting data in localstorage
-// Second sentence We handle date objects automatically
+// handling date objects automatically
 export function usePersistentState(localKey, defaultValue) {
   const [data, setData] = useState(() => {
     try {
@@ -27,7 +27,7 @@ export function usePersistentState(localKey, defaultValue) {
   });
 
   // storing updates to localstorage whenever data changes
-  // Second sentence We stringifying date objects
+  // stringifying date objects
   useEffect(() => {
     try {
       const replacer = (key, value) => {
