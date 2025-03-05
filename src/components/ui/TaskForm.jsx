@@ -3,20 +3,35 @@
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import CategorySelector from "./CategorySelector";
+import { DatePicker } from "./DatePicker";
 
-const TaskForm = ({ onAddTask }) => {
+export default function TaskForm({
+  onAddTask,
+  categories,
+  onAddCategory,
+  onDeleteCategory,
+  onRenameCategory,
+}) {
+  // storing task text
   const [text, setText] = useState("");
+  // storing chosen category
+  const [category, setCategory] = useState("");
+  // storing date or null
+  const [dueDate, setDueDate] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (text.trim()) {
-      onAddTask(text.trim());
+      onAddTask(text.trim(), category, dueDate);
       setText("");
+      setCategory("");
+      setDueDate(null);
     }
   };
 
   return (
-    <form className="flex space-x-2" onSubmit={handleSubmit}>
+    <form className="flex flex-col space-y-2 mb-4" onSubmit={handleSubmit}>
       <Input
         type="text"
         value={text}
@@ -24,9 +39,25 @@ const TaskForm = ({ onAddTask }) => {
         placeholder="Add a new task..."
         className="w-full"
       />
-      <Button type="submit">Add Task</Button>
+
+      <div className="flex items-center space-x-2">
+        <CategorySelector
+          categories={categories}
+          selectedCategory={category}
+          onSelectCategory={setCategory}
+          onAddCategory={onAddCategory}
+          onDeleteCategory={onDeleteCategory}
+          onRenameCategory={onRenameCategory}
+        />
+
+        <DatePicker
+          date={dueDate}
+          onDateChange={setDueDate}
+          className="w-[200px]"
+        />
+
+        <Button type="submit">Add Task</Button>
+      </div>
     </form>
   );
-};
-
-export default TaskForm;
+}
